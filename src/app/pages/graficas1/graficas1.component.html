@@ -1,1 +1,31 @@
-<p>graficas1 works!</p>
+<div class="row">
+    <div class="col-6" *ngFor="let graph of numGraficas">
+        <div class="card">
+            <div class="card-body">
+                <app-grafica [grafica]="graficos[graph]">
+                </app-grafica>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafica [grafica]="graficos['grafico2']"></app-grafica>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafica [grafica]="graficos['grafico3']"></app-grafica>
+            </div>
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-grafica [grafica]="graficos['grafico4']"></app-grafica>
+            </div>
+        </div>
+    </div> -->
+</div>
