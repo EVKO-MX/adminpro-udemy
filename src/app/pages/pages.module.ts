@@ -18,6 +18,8 @@ import { ProgressComponent } from './progress/progress.component';
 // TEMPORAL
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficaComponent } from '../components/grafica/grafica.component';
+import { CommonModule } from '@angular/common';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { GraficaComponent } from '../components/grafica/grafica.component';
         Graficas1Component,
         ProgressComponent,
         IncrementadorComponent,
-        GraficaComponent
+        GraficaComponent,
+        AccountSettingsComponent
     ],
     exports:[
         DashboardComponent,
@@ -38,7 +41,8 @@ import { GraficaComponent } from '../components/grafica/grafica.component';
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        CommonModule
     
     ]
 })
