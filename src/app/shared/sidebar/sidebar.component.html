@@ -21,10 +21,8 @@
                 <li *ngFor="let menu of _sidebar.menu">
                     <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i [class]="menu.icono"></i><span class="hide-menu">{{menu.titulo}}<span class="label label-rouded label-themecolor pull-right">4</span></span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="index.html">Minimal </a></li>
-                        <li><a href="index2.html">Analytical</a></li>
-                        <li><a href="index3.html">Demographical</a></li>
-                        <li><a href="index4.html">Modern</a></li>
+                        <li *ngFor="let page of menu.subMenu"><a href="#{{page.url}}">{{page.titulo}} </a></li>
+
                     </ul>
                 </li>
             </ul>

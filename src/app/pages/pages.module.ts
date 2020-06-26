@@ -19,7 +19,6 @@ import { ProgressComponent } from './progress/progress.component';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficaComponent } from '../components/grafica/grafica.component';
 import { CommonModule } from '@angular/common';
-import { AccountSettingsComponent } from './account-settings/account-settings.component';
 
 
 @NgModule({
@@ -30,7 +29,6 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
         ProgressComponent,
         IncrementadorComponent,
         GraficaComponent,
-        AccountSettingsComponent
     ],
     exports:[
         DashboardComponent,
