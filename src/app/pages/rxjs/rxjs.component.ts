@@ -61,7 +61,7 @@ export class RxjsComponent implements OnInit,OnDestroy {
 
       }, 1000);
     }).pipe(
-      map(resp =>resp.valor),
+      map((resp):any =>resp),
       filter( (valor, index)=>{
         if ((valor % 2)===1) {
           //impar
