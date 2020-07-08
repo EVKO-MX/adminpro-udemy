@@ -19,6 +19,8 @@ import { ProgressComponent } from './progress/progress.component';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficaComponent } from '../components/grafica/grafica.component';
 import { CommonModule } from '@angular/common';
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { CommonModule } from '@angular/common';
         ProgressComponent,
         IncrementadorComponent,
         GraficaComponent,
+        ProfileComponent,
     ],
     exports:[
         DashboardComponent,
@@ -40,8 +43,8 @@ import { CommonModule } from '@angular/common';
         PAGES_ROUTES,
         FormsModule,
         ChartsModule,
-        CommonModule
-    
+        CommonModule,
+        PipesModule
     ]
 })
 export class PagesModule {}
