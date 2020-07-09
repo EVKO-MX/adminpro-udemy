@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/models/usuario.model';
 import { UsuarioService } from 'src/app/services/service.index';
 
-
+declare var swal:any ;
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   imagenSubir:File ;
 
-  imagenTemp:string;
+  imagenTemp:ArrayBuffer;
 
 
   constructor(
@@ -69,3 +69,5 @@ export class ProfileComponent implements OnInit {
     this._usuarioService.cambiarImagen(this.imagenSubir,this.usuario._id)
   }
 }
+
+
