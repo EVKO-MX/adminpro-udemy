@@ -9,7 +9,7 @@ export class ImagenPipe implements PipeTransform {
   transform(img: string, tipo:string ='usuario'): any {
 
     let url = URL_SERVICES + '/img/' ;
-
+    
     if (!img) {
       return url +'/usuarios/xxx' ;
     }
@@ -28,6 +28,7 @@ export class ImagenPipe implements PipeTransform {
           return url += 'medicos/' +img;
         
       case 'hospital':
+        
           
           return url += 'hospitales/' + img ;
       

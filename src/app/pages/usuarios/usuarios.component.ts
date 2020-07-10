@@ -75,8 +75,7 @@ export class UsuariosComponent implements OnInit {
 
     this._usuarioService.buscarUsuarios(termino).subscribe((usuarios)=>{
       
-      console.log(usuarios);
-      
+      this.usuarios = usuarios ;
     });
     
   }

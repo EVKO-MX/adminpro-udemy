@@ -146,7 +146,6 @@ export class UsuarioService {
   buscarUsuarios(termino:string){
     
     let url = URL_SERVICES + '/busqueda/coleccion/usuarios/'+ termino ;
-    console.log('holy-crap');
     return this.http.get(url).pipe(map((resp:any) => resp.usuarios)) ;
 
   };
