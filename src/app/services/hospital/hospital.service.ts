@@ -32,8 +32,9 @@ export class HospitalService {
     
     return this.http.get(url)
       .pipe(map((resp:any)=>{
-
-        return resp.hospitales ;
+          console.log(resp);
+          
+        return [resp,resp.hospitales];
       }))
       
   }

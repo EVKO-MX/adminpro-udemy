@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HospitalService } from 'src/app/services/service.index';
 import { Hospital } from 'src/app/models/hospital.model';
-import { EventEmitter } from 'events';
 import { ModalUploadService } from 'src/app/components/modal-upload/modal-upload.service';
 
 declare var swal:any ;
@@ -18,12 +17,14 @@ export class HospitalesComponent implements OnInit {
   desde: number = 0;
   cargando:boolean = true;
   totalRegistros: number = 0;
+  ruta:string ;
 
   constructor(public _hospitalService: HospitalService,
               public _modalUploadService:ModalUploadService )
                {
                 this._modalUploadService.notificacion
                   .subscribe( resp => this.cargarHospitales());
+
                }
 
   ngOnInit(): void {
@@ -86,8 +87,10 @@ export class HospitalesComponent implements OnInit {
 
     this._hospitalService.cargarHospitales()
       .subscribe((resp:any)=>{
-      this.totalRegistros = resp.total ;
-      this.hospitales = resp.hospitales ;
+        console.log(resp);
+      
+      this.totalRegistros = resp[0].total ;
+      this.hospitales = resp[0].hospitales ;
       this.cargando =false ;
     });
   }
