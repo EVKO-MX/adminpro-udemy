@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
 import swal from 'sweetalert';
 import { map } from 'rxjs/operators';
 
-declare var swal:any ;
 
 
 
